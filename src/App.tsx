@@ -7,6 +7,7 @@ function Header() {
       <div className="header">
         <a href='#home' className='header-button'>Home</a>
         <a href='#contact' className='header-button'>Contact</a>
+        <a href='#social' className='header-button'>Socials</a>
       </div>
   )
 }
