@@ -10,24 +10,25 @@ body {
 }
 
 #slide {
-  left: -100px;
+  position: relative;
+  bottom: -100px;
   opacity: 0;
   -webkit-animation: slide 1s forwards;
   -webkit-animation-delay: 1s;
-  animation: slide 0.5s forwards;
+  animation: slide 1s forwards;
   animation-delay: 1s;
 }
 
 @-webkit-keyframes slide {
   100% {
-    left: 0;
+    bottom: 0;
     opacity: 1;
   }
 }
 
 @keyframes slide {
   100% {
-    left: 0;
+    bottom: 0;
     opacity: 1;
   }
 }
