@@ -1,12 +1,13 @@
-body {
-  background-color: white;
-  color: black;
-}
+
 
 .main {
   margin-top: 70px;
   margin-left: 40px;
   margin-right: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #slide {
@@ -14,9 +15,9 @@ body {
   bottom: -100px;
   opacity: 0;
   -webkit-animation: slide 1s forwards;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-delay: 2s;
   animation: slide 1s forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @-webkit-keyframes slide {
@@ -27,6 +28,30 @@ body {
 }
 
 @keyframes slide {
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#slide-top {
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 1s forwards;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes slide-top {
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-top {
   100% {
     bottom: 0;
     opacity: 1;
@@ -71,6 +96,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding: 20px;
 }
 
 .projects {
@@ -81,7 +107,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: black;
 }
 
 .about-list {
@@ -94,4 +119,24 @@ body {
   align-items: center;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+.top {
+  padding: 20px;
+  height: 500px;
+}
+
+.top-paper {
+  background-image: url("./img/background.jpg");
+  border-radius: 15px;
+  height: 100%;
+}
+
+.top-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
