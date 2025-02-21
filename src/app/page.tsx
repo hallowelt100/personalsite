@@ -8,14 +8,12 @@ import {
   Paper,
   IconButton,
   Avatar,
-  Divider,
   Fab,
   Tooltip,
 } from "@mui/material";
 import {
   GitHub,
   LinkedIn,
-  Twitter,
   Email,
   LocationOn,
   Code as CodeIcon,
@@ -29,7 +27,7 @@ export default function Home() {
           {/* Hero Section */}
           <Box textAlign="center">
             <Typography variant="h2" component="h1" gutterBottom>
-              Hello, I'm Kayra Güler
+              Hello, I&apos;m Kayra Güler
             </Typography>
             <Typography variant="h5" color="text.secondary" gutterBottom>
               Ongoing Computer Scientist & Developer
@@ -57,13 +55,13 @@ export default function Home() {
                   About Me
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  I'm a passionate developer with 3 years of experience in Software Developement. I have experience in building web applications using React, developing ChatBot applications and using Python scripts.
+                  I&apos;m a passionate developer with 3 years of experience in Software Developement. I have experience in building web applications using React, developing ChatBot applications and using Python scripts.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  I'm currently pursuing a Bachelor's degree in Computer Science at the University of Applied Sciences in Karlsruhe (DHBW Karlsruhe). Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German "Die Linke" Party.
+                  I&apos;m currently pursuing a Bachelor&apos;s degree in Computer Science at the University of Applied Sciences in Karlsruhe (DHBW Karlsruhe). Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German &quot;Die Linke&quot; Party.
                 </Typography>
                 <Typography variant="body1">
-                  When I'm not coding, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
+                  When I&apos;m not coding, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
                 </Typography>
               </Box>
             </Box>
@@ -72,7 +70,7 @@ export default function Home() {
           {/* Contact Section */}
           <Box>
             <Typography variant="h4" gutterBottom textAlign="center">
-              Let's Connect
+              Let&apos;s Connect
             </Typography>
             <Stack
               direction="row"
