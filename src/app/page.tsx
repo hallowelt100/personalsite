@@ -1,95 +1,133 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Stack,
+  Paper,
+  IconButton,
+  Avatar,
+  Divider,
+  Fab,
+  Tooltip,
+} from "@mui/material";
+import {
+  GitHub,
+  LinkedIn,
+  Twitter,
+  Email,
+  LocationOn,
+  Code as CodeIcon,
+} from "@mui/icons-material";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Container maxWidth="md" sx={{ py: 8 }}>
+        <Stack spacing={6}>
+          {/* Hero Section */}
+          <Box textAlign="center">
+            <Typography variant="h2" component="h1" gutterBottom>
+              Hello, I'm Kayra Güler
+            </Typography>
+            <Typography variant="h5" color="text.secondary" gutterBottom>
+              Ongoing Computer Scientist & Developer
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              <LocationOn sx={{ verticalAlign: "middle" }} /> Based in Munich, Germany
+            </Typography>
+          </Box>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          {/* About Section */}
+          <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
+            <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
+              <Avatar
+                src="/profile.jpg" // Add your profile image to the public folder
+                alt="Profile Picture"
+                sx={{
+                  width: 200,
+                  height: 200,
+                  borderRadius: 2,
+                  boxShadow: 3,
+                }}
+              />
+              <Box>
+                <Typography variant="h4" gutterBottom>
+                  About Me
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  I'm a passionate developer with 3 years of experience in Software Developement. I have experience in building web applications using React, developing ChatBot applications and using Python scripts.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  I'm currently pursuing a Bachelor's degree in Computer Science at the University of Applied Sciences in Karlsruhe (DHBW Karlsruhe). Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German "Die Linke" Party.
+                </Typography>
+                <Typography variant="body1">
+                  When I'm not coding, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
+                </Typography>
+              </Box>
+            </Box>
+          </Paper>
+
+          {/* Contact Section */}
+          <Box>
+            <Typography variant="h4" gutterBottom textAlign="center">
+              Let's Connect
+            </Typography>
+            <Stack
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+              alignItems="center"
+            >
+              <IconButton
+                href="https://github.com/hallowelt100"
+                target="_blank"
+                aria-label="GitHub"
+                sx={{ color: "white" }}
+              >
+                <GitHub />
+              </IconButton>
+              <IconButton
+                href="https://www.linkedin.com/in/hallowelt100"
+                target="_blank"
+                aria-label="LinkedIn"
+                sx={{ color: "white" }}
+              >
+                <LinkedIn />
+              </IconButton>
+        
+            </Stack>
+            <Box textAlign="center" mt={4}>
+              <Button
+                variant="contained"
+                startIcon={<Email />}
+                href="mailto:kayra.gueler32@gmail.com"
+                size="large"
+                color="primary"
+              >
+                Get in Touch
+              </Button>
+            </Box>
+          </Box>
+        </Stack>
+      </Container>
+      
+      <Tooltip title="View Source Code of this page" placement="left">
+        <Fab
+          color="primary"
+          aria-label="source code"
+          sx={{
+            position: 'fixed',
+            bottom: 24,
+            right: 24,
+          }}
+          href="https://github.com/hallowelt100/personalsite"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <CodeIcon />
+        </Fab>
+      </Tooltip>
+    </>
   );
 }
