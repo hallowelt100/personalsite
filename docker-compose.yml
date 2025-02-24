@@ -1,9 +1,7 @@
-version: '3.8'
-
+version: '3'
 services:
-  personal-site:
-    image: ghcr.io/your-username/your-repo-name:latest
+  website:
+    image: hw100/personalsite:latest
     ports:
       - "80:3000"
-    environment:
-      NODE_ENV: production
+    restart: always
