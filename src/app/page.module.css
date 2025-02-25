@@ -25,6 +25,10 @@
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
   }
+
+  .logo {
+    filter: invert();
+  }
 }
 
 .main {
@@ -159,10 +163,5 @@ a.secondary {
     align-items: center;
     justify-content: center;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
 }

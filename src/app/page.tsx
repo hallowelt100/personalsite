@@ -39,15 +39,16 @@ export default function Home() {
 
           {/* About Section */}
           <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
-            <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
+            <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start', flexDirection: { xs: 'column', md: 'row' } }}>
               <Avatar
-                src="/profile.jpg" // Add your profile image to the public folder
+                src="/profile.jpeg"
                 alt="Profile Picture"
                 sx={{
                   width: 200,
                   height: 200,
                   borderRadius: 2,
                   boxShadow: 3,
+                  alignSelf: { xs: 'center', md: 'flex-start' },
                 }}
               />
               <Box>
