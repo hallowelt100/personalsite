@@ -1,4 +1,10 @@
 version: '3'
+
+# Define networks at the top level
+networks:
+  proxy:
+    external: true  # This tells Docker this network is created externally
+
 services:
   nginx-proxy-manager:
     image: 'jc21/nginx-proxy-manager:latest'
@@ -12,4 +18,4 @@ services:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
     networks:
-      - proxy
+      - proxy    # Reference the network here
