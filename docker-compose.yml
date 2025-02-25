@@ -1,7 +1,19 @@
 version: '3'
+
+networks:
+  proxy:
+    external: true
+  internal:
+    external: false
+
 services:
   website:
     image: hw100/personalsite:latest
-    ports:
-      - "80:3000"
+    container_name: personalsite
+    networks:
+      - proxy
+      - internal
+    expose:
+      - "3000"
     restart: always
+    # Remove the ports section since we'll be using nginx proxy manager
