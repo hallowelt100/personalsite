@@ -18,6 +18,7 @@ import {
   LocationOn,
   Code as CodeIcon,
 } from "@mui/icons-material";
+import GitCommits from '@/components/GitCommits';
 
 export default function Home() {
   return (
@@ -39,16 +40,15 @@ export default function Home() {
 
           {/* About Section */}
           <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
-            <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start', flexDirection: { xs: 'column', md: 'row' } }}>
+            <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
               <Avatar
-                src="/profile.jpeg"
+                src="/profile.jpg" // Add your profile image to the public folder
                 alt="Profile Picture"
                 sx={{
                   width: 200,
                   height: 200,
                   borderRadius: 2,
                   boxShadow: 3,
-                  alignSelf: { xs: 'center', md: 'flex-start' },
                 }}
               />
               <Box>
@@ -67,6 +67,9 @@ export default function Home() {
               </Box>
             </Box>
           </Paper>
+
+          {/* GitHub Activity Section */}
+          <GitCommits />
 
           {/* Contact Section */}
           <Box>
