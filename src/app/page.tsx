@@ -104,7 +104,7 @@ export default function Home() {
               <Button
                 variant="contained"
                 startIcon={<Email />}
-                href="mailto:kayra.gueler32@gmail.com"
+                href="mailto:hw1001@proton.me"
                 size="large"
                 color="primary"
               >
