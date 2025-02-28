@@ -17,6 +17,7 @@ import {
   Email,
   LocationOn,
   Code as CodeIcon,
+  Instagram,
 } from "@mui/icons-material";
 import GitCommits from '@/components/GitCommits';
 
@@ -89,6 +90,14 @@ export default function Home() {
                 sx={{ color: "white" }}
               >
                 <GitHub />
+              </IconButton>
+              <IconButton
+                href="https://www.instagram.com/hallowelt100/"
+                target="_blank"
+                aria-label="Instagram"
+                sx={{ color: "white" }}
+              >
+                <Instagram />
               </IconButton>
               <IconButton
                 href="https://www.linkedin.com/in/hallowelt100"
