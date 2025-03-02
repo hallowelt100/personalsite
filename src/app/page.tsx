@@ -41,7 +41,7 @@ export default function Home() {
           <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
             <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
               <Avatar
-                src="/profile.jpg" // Add your profile image to the public folder
+                src="/profile.jpeg"
                 alt="Profile Picture"
                 sx={{
                   width: 200,
