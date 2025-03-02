@@ -17,9 +17,7 @@ import {
   Email,
   LocationOn,
   Code as CodeIcon,
-  Instagram,
 } from "@mui/icons-material";
-import GitCommits from '@/components/GitCommits';
 
 export default function Home() {
   return (
@@ -43,7 +41,7 @@ export default function Home() {
           <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
             <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
               <Avatar
-                src="/profile.jpg" 
+                src="/profile.jpg" // Add your profile image to the public folder
                 alt="Profile Picture"
                 sx={{
                   width: 200,
@@ -60,17 +58,16 @@ export default function Home() {
                   I&apos;m a passionate developer with 3 years of experience in Software Developement. I have experience in building web applications using React, developing ChatBot applications and using Python scripts.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  I&apos;m currently pursuing a Bachelor&apos;s degree in Computer Science at the Corporate State University Baden-Württemberg (Duale Hochschule Baden-Württemberg) in Karlsruhe. Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German &quot;Die Linke&quot; Party.
+                  I&apos;m currently pursuing a Bachelor&apos;s degree in Computer Science at the University of Applied Sciences in Karlsruhe (DHBW Karlsruhe). Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German &quot;Die Linke&quot; Party.
                 </Typography>
                 <Typography variant="body1">
-                  When I&apos;m not coding for work or university, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
+                  When I&apos;m not coding, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
                 </Typography>
               </Box>
             </Box>
           </Paper>
 
           {/* GitHub Activity Section */}
-          <GitCommits />
 
           {/* Contact Section */}
           <Box>
@@ -90,14 +87,6 @@ export default function Home() {
                 sx={{ color: "white" }}
               >
                 <GitHub />
-              </IconButton>
-              <IconButton
-                href="https://www.instagram.com/hallowelt100/"
-                target="_blank"
-                aria-label="Instagram"
-                sx={{ color: "white" }}
-              >
-                <Instagram />
               </IconButton>
               <IconButton
                 href="https://www.linkedin.com/in/hallowelt100"
