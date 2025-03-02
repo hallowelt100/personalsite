@@ -59,10 +59,10 @@ export default function Home() {
                   I&apos;m a passionate developer with 3 years of experience in Software Developement. I have experience in building web applications using React, developing ChatBot applications and using Python scripts.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  I&apos;m currently pursuing a Bachelor&apos;s degree in Computer Science at the University of Applied Sciences in Karlsruhe (DHBW Karlsruhe). Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German &quot;Die Linke&quot; Party.
+                  I&apos;m currently pursuing a Bachelor&apos;s degree in Computer Science at the Corporate State University Baden-Württemberg in Karlsruhe (DHBW Karlsruhe) with Siemens Energy as the corporate partner. Currently primarely using Python and react.js. Worked projects include a ChatBot as a web-app for a company and a voluntary website project for the German &quot;Die Linke&quot; Party.
                 </Typography>
                 <Typography variant="body1">
-                  When I&apos;m not coding, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
+                  When I&apos;m not coding for work or university, you can find me working on personal projects (like this one), playing video games and consuming all sorts of culture (movies, music, books, etc).
                 </Typography>
               </Box>
             </Box>
