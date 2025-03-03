@@ -1,4 +1,3 @@
-import { Opacity } from '@mui/icons-material';
 import { Paper, Typography } from '@mui/material';
 import { LineChart } from '@mui/x-charts';
 import React, { useEffect, useState } from 'react'
@@ -48,35 +47,44 @@ export default function GitCommits() {
     }, []);
 
     return (
-        <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
+        <Paper elevation={3} sx={{ p: 4, borderRadius: 2 , display: 'flex' , flexDirection: 'column', alignItems: 'center' }}>
             <Typography variant="h4" gutterBottom>
                 My GitHub Activity
             </Typography>
             <LineChart
                 sx={{
                     '& .MuiLineElement-root': {
-                        stroke: '#4caf50',
                         strokeWidth: 2,
-                    },
-                    fill: 'linear-gradient(to top, #4caf50 0%, #4caf50 100%)',
-                    fillOpacity: 0.3,
-                    gradient: "linear-gradient(to top, #4caf50 0%, #4caf50 100%)",
+                        color: 'green',
+                      },
+                    '&. MuiAreaElement': {
+                        fill: "url('#gradient')",
+                    }
                 }}
                 xAxis={[{ 
                     data: commitData.dates,
-                    scaleType: 'band'
+                    scaleType: 'point'
                 }]}
                 series={[
                     {
                         data: commitData.commits,
                         label: 'Commits',
-                        area: true,
                         curve: "natural",
+                        area: true,
+                        showMark: false,
                     },
                 ]}
+                grid={{horizontal: true}}
                 width={500}
                 height={300}
-            />
+            >
+            <defs>
+                <linearGradient id="gradient" gradientTransform='rotate(90)'>
+                        <stop offset="100%" stopColor="green" />
+                        <stop offset="0%" stopColor="transparant" />
+                </linearGradient>
+            </defs>
+            </LineChart>
         </Paper>
     );
 }
