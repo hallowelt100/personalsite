@@ -7,6 +7,14 @@ interface CommitData {
     commits: number[];
 }
 
+interface CommitItem {
+    commit: {
+        author: {
+            date: string;
+        }
+    }
+}
+
 export default function GitCommits() {
     const [commitData, setCommitData] = useState<CommitData>({ dates: [], commits: [] });
     const username = 'hallowelt100'; // Your GitHub username
@@ -29,7 +37,7 @@ export default function GitCommits() {
                 const data = await response.json();
 
                 const commitsByDate: Record<string, number> = {};
-                data.items.forEach((item: any) => {
+                data.items.forEach((item: CommitItem) => {
                     const date = item.commit.author.date.split('T')[0];
                     commitsByDate[date] = (commitsByDate[date] || 0) + 1;
                 });
@@ -55,7 +63,7 @@ export default function GitCommits() {
                 sx={{
                     '& .MuiLineElement-root': {
                         strokeWidth: 2,
-                        color: 'green',
+                        color: '#38721b',
                       },
                     '&. MuiAreaElement': {
                         fill: "url('#gradient')",
@@ -72,6 +80,7 @@ export default function GitCommits() {
                         curve: "natural",
                         area: true,
                         showMark: false,
+                        baseline: 0,
                     },
                 ]}
                 grid={{horizontal: true}}
