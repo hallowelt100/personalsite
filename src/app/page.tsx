@@ -22,6 +22,8 @@ import {
 export default function Home() {
   return (
     <>
+    {/* Implement this script locally and fix the background coloring */}
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Stack spacing={6}>
           {/* Hero Section */}
@@ -98,6 +100,19 @@ export default function Home() {
               </IconButton>
         
             </Stack>
+            <Stack
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+              alignItems="center"
+              mt={2}
+              >
+                <div className="badge-base LI-profile-badge" 
+                  data-locale="de_DE" data-size="medium" data-theme="dark" data-type="HORIZONTAL" 
+                  data-vanity="hallowelt100" data-version="v1">
+                </div>
+            </Stack>
+
             <Box textAlign="center" mt={4}>
               <Button
                 variant="contained"
